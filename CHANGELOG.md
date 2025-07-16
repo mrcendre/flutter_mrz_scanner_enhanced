@@ -1,3 +1,8 @@
+# 3.1.9
+Corrected import mistake on README file
+
+For iOS support, I have implemented the necessary changes to enable compatibility with iOS 13 and later versions. However, due to limited access to macOS development environment (only had access for a few hours) and Apple's requirement for physical device testing, I was unable to thoroughly test the Swift-based MRZ OCR functionality on actual iOS devices.
+
 # 3.1.8
 
 # 3.1.7
