@@ -50,7 +50,7 @@ Contributions welcome! Please report issues and feature requests on [GitHub](htt
 Add to `pubspec.yaml`
 ```yaml
 dependencies:
-  flutter_mrz_scanner: <latest_version_here>
+  flutter_mrz_scanner_enhanced: <latest_version_here>
 ```
 ### For iOS
 Set iOS deployment target to 12.
