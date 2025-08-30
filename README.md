@@ -37,6 +37,18 @@ This package builds upon the work of:
 - [@eusopht2021](https://github.com/eusopht2021) - Community contributor
 
 Contributions welcome! Please report issues and feature requests on [GitHub](https://github.com/ELMEHDAOUIAhmed/flutter_mrz_scanner_enhanced).
+## 🚨 Project Status & Known Issues
+
+**Notice:**
+I will not be pushing future updates to this package due to my inability to test on iOS devices and time constraints.
+
+### Common Issues
+- **OCR accuracy** is generally good, but sometimes parsing fails even when the OCR result is correct. This may be an issue with the MRZ Parser. (You can see the raw OCR output in the example code, as I have added print statements before parsing.)
+- **Fotoapparat dependency:** The package needs to switch to a working fork of Fotoapparat. Maven issues need to be fixed, as Fotoapparat is now published to Maven Central, not JitPack.
+- **Cropped MRZ image display:** The package still needs to properly display the cropped MRZ area image.
+
+---
+
 ### Supported formats:
 * TD1
 * TD2

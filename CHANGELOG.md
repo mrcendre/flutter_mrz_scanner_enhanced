@@ -1,3 +1,11 @@
+# 3.2
+Added a notice in the README that future updates will not be released due to lack of iOS testing capability and time constraints.
+Documented common issues:
+OCR accuracy is generally good, but parsing may fail even with correct OCR results (possible MRZ Parser issue).
+Fotoapparat dependency needs to be updated to a working fork and Maven issues fixed (Fotoapparat is now on Maven Central).
+Cropped MRZ area image is not properly displayed.
+Updated README with these details and guidance for users.
+
 # 3.1.9
 Corrected import mistake on README file
 
