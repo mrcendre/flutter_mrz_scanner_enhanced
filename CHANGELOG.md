@@ -1,4 +1,4 @@
-# 3.2
+# 3.2.0
 Added a notice in the README that future updates will not be released due to lack of iOS testing capability and time constraints.
 Documented common issues:
 OCR accuracy is generally good, but parsing may fail even with correct OCR results (possible MRZ Parser issue).
