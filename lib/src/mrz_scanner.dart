@@ -79,26 +79,26 @@ class MRZController {
     switch (call.method) {
       case 'onError':
         onError?.call(call.arguments);
-        debugPrint('Error occurred: ${call.arguments}');
+        if (kDebugMode) debugPrint('Error occurred: ${call.arguments}');
         break;
       case 'onParsed':
         if (onParsed != null) {
-          debugPrint('MRZ detected, parsing please wait...');
+          if (kDebugMode) debugPrint('MRZ detected, parsing please wait...');
           onDetection?.call(); // Notify that MRZ is detected
           final String filePath = call.arguments as String;
-          debugPrint('MRZ BEFORE PARSE: $filePath');
+          if (kDebugMode) debugPrint('MRZ BEFORE PARSE: $filePath');
           final lines = _splitRecognized(call.arguments);
           if (lines.isNotEmpty) {
             final result = MRZParser.tryParse(lines);
             if (result != null) {
               onParsed!(result);
-              debugPrint('Parsing successful');
+              if (kDebugMode) debugPrint('Parsing successful');
             } else {
-              debugPrint('Parsing failed, Scanning again');
+              if (kDebugMode) debugPrint('Parsing failed, Scanning again');
               onParsingFailed?.call(); // Notify parsing failure
             }
           } else {
-            debugPrint('No MRZ lines detected');
+            if (kDebugMode) debugPrint('No MRZ lines detected');
             onParsingFailed?.call(); // Notify parsing failure
           }
         }
